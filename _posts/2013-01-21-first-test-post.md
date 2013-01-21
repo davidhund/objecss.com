@@ -1,6 +1,6 @@
 ---
-layout:post
-title:first test post
+layout: post
+title: first test post
 ---
 
 # {{page.title}}

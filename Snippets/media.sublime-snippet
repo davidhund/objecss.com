@@ -1,0 +1,76 @@
+<snippet>
+	<content><![CDATA[
+/* = Media object
+   ============================================================================
+   The famous 'Media Object' from @stubbornella: 
+   http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/
+
+   Use with a lot(!) of 'block' objects containing images:
+   - Twitter conversations
+   - Profile blocks
+   - etc
+
+   HTML:
+   <div class="media">
+    <a href="#" class="media__img"><!-- Could be other element! -->
+     <img src="http://lorempixel.com/80/80/animals/" alt="" />
+    </a>
+    <div class="media__body">
+     <p>Some content: could be almost anything</p>
+    </div>
+   </div>
+
+   NOTE: to prevent having to add `.media` to all(!) LI's in a list
+   I've added the `.media-list` object. Adding this class automatically
+   makes all descending LI's `.media` objects:
+   <ul class="media-list">
+     <li><!-- No need for .media on all LI's -->
+        <div class="media__img">...</div>
+        <div class="media__body">...</div>
+     </li>
+   </ul>
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.media,
+.media-list,
+.media__body,
+.media-list > li {
+	/* Clearfix: OR EXTEND YOUR OWN */
+	@extend %contain;
+}
+.media,
+.media-list {
+	& > .media__img {
+		float: left;
+		margin-right: ${1:1em};
+	}
+	& > .media__img--reversed {
+		float: right;
+		margin-left: $1;
+	}
+	/* aligns with top of .media__img */
+	& > .media__body,
+	& > li {
+		overflow: hidden;
+		&, & > :last-child {
+			margin-bottom: 0;
+		}
+		:first-child {
+			margin-top: 0;
+		}
+	}
+}
+.media__img,
+.media__img--reversed {
+		& > img {
+		display: block;
+	}
+}
+
+$2
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>media</tabTrigger>
+	<description>OOCSS Sass Media Object</description>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.css, source.scss, source.sass</scope>
+</snippet>

@@ -1,0 +1,97 @@
+<snippet>
+	<content><![CDATA[
+/* = OBJECSS.COM — Help & Instructions
+   ============================================================================
+   * Author:  David Hund — @valuedstandards
+   * Version: 0.1
+   * Website: https://github.com/davidhund/objecss.com
+
+   1. [<Tab>]           Introduction
+   2. [<Tab><Tab>]      Usage
+   3. [<Tab><Tab><Tab>] Available Objecss
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1: INTRODUCTION
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+$1
+   Objecss.com is a collection of re-usable OOCSS (Sass .scss syntax) objects.
+   OOCSS objects form the basis of your site's structure. They are building 
+   blocks for all of your 'modules'.
+
+   The principles behind OOCSS and even the various objects themselves are 
+   not my invention. _Please_ check out the following people:
+
+   - @stubbornella https://github.com/stubbornella/oocss/wiki
+   - @snookca http://smacss.com
+   - @csswizardry http://inuitcss.com
+   - and others such as @necolar
+
+   I cannot provide you with a thorough explanation of OOCSS here but be sure 
+   to check out the various articles/frameworks of these bright people.
+
+   ** If you're looking for a great light-weight OOCSS _Framework_ I cannot 
+   recommend Harry Roberts' Inuit CSS enough! [http://inuitcss.com] **
+
+   Objecss.com — however — is *not* a framework but simply provides you with 
+   various OOCSS CSS objects _when you need them_ in the form of Sublime Text 
+   Snippets (as well as Sass .scss files that can be @imported in your project)
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2: USAGE
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+$2
+   Objecss are simply Sublime Text Snippets that work in .css and .scss files
+   One example is the Media Object: `media.sublime-snippet`
+
+   The `tabTrigger` for each object is similar to the name of the object:
+   - To output a .media object use: `media<tab>` (without the `quotes`)
+   - To output a .nav object use: `nav<tab>`
+   - etc.
+
+   In some snippets variables are used (to set a padding-width for example)
+   You are advised to replace the default values with your own @variable.
+   But changing the first selected value and <Tab>-ing through the Object 
+   will change all corresponding values.
+
+   Output:
+   ---------------------------------------------------------------------------
+   Most Objecss are outputted as CSS classes (`.media {}`)
+   Some of you would want to use Placeholder Selectors instead (`%media {}`)
+
+   Great! Just change the `.` to a `%` :)
+
+   The output is commented .scss code. It is advisable to minify and compress 
+   your processed .scss files.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+3: AVAILABLE OBJECSS
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+$3
+   At the moment there are the following Objecss:
+
+   * snippet-name [trigger]    — "Description"
+   ---------------------------------------------------------------------------
+   * Objecss      [objecss]    — This reference comment
+   * Clearfix     [cf]         — Placeholder Selector: contains floats
+   * Media        [media]      — @Stubbornella's famous Media Object
+   * Nav          [nav]        — @csswizardry's nav abstraction
+
+   Many are to follow :)
+
+   Again: if you need a full-blown framework: use http://inuitcss.com
+
+
+   Now go delete this comment and edit your Objecss!
+
+   David Hund
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+$4
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>objecss</tabTrigger>
+	<description>Objecss Info & Instructions</description>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.css, source.scss, source.sass</scope>
+</snippet>

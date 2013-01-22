@@ -1,0 +1,31 @@
+<snippet>
+	<content><![CDATA[
+/* = Clearfix
+   ============================================================================
+   Micro Clearfix as per: nicolasgallagher.com/micro-clearfix-hack
+
+   A Clearfix makes elements 'contain' floats
+
+   NOTE: This is a 'Placeholder' Selector: Extend this in other modules
+   with `@extend ${1:%contain};`
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+$1 {
+	zoom: 1;
+		&:before,
+		&:after {
+			content: " ";
+			display: table;
+		}
+	&:after {
+		clear: both;
+	}
+}
+
+$2
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>cf</tabTrigger>
+	<description>Sass CSS Clearfix Placeholder Selector</description>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.css, source.scss, source.sass</scope>
+</snippet>
